@@ -1,4 +1,4 @@
-package Day2;
+package Day3;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -6,16 +6,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-/**
- * {class description}
- * <p>
- * Created by (name) for (project).
- *
- * @version 1.0
- */
 public class Main {
 
-    private static File inputFile = new File("in/day2.txt");
+    private static File inputFile = new File("in/day3.txt");
 
     public static void main(String[] args) {
         System.out.println("Starting AOC2017 with data input \'" + inputFile + "\'\n");
@@ -39,26 +32,10 @@ public class Main {
 
     public void partOne() {
         ArrayList<String> lines = readFile();
-
         int sum = 0;
-        for (int i = 0; i < lines.size(); i++) {
-            String[] split = lines.get(i).split("\t");
-            int[] nums = new int[split.length];
-            for (int j = 0; j < split.length; j++) {
-                nums[j] = Integer.parseInt(split[j]);
-            }
 
-            int min = Integer.MAX_VALUE, max = 0;
-            for (int j = 0; j < nums.length; j++) {
-                if (nums[j] < min) {
-                    min = nums[j];
-                }
-                if (nums[j] > max) {
-                    max = nums[j];
-                }
-            }
+        for (String line : lines) {
 
-            sum += max - min;
         }
 
         System.out.println("Sum: " + sum);
@@ -66,22 +43,10 @@ public class Main {
 
     public void partTwo() {
         ArrayList<String> lines = readFile();
-
         int sum = 0;
-        for (int i = 0; i < lines.size(); i++) {
-            String[] split = lines.get(i).split("\t");
-            int[] nums = new int[split.length];
-            for (int j = 0; j < split.length; j++) {
-                nums[j] = Integer.parseInt(split[j]);
-            }
 
-            for (int j = 0; j < nums.length; j++) {
-                for (int k = 0; k < nums.length; k++) {
-                    if (nums[j] % nums[k] == 0 && nums[j] != nums[k]) {
-                        sum += nums[j] / nums[k];
-                    }
-                }
-            }
+        for (String line : lines) {
+
         }
 
         System.out.println("Sum: " + sum);
