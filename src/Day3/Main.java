@@ -8,8 +8,14 @@ import java.util.ArrayList;
 
 public class Main {
 
+    /* File object for input file */
     private static File inputFile = new File("in/day3.txt");
 
+    /**
+     * Main method. PRE-WRITTEN
+     *
+     * @param args - Program arguments
+     */
     public static void main(String[] args) {
         System.out.println("Starting AOC2017 with data input \'" + inputFile + "\'\n");
         long startTime = System.nanoTime();
@@ -30,6 +36,9 @@ public class Main {
         }
     }
 
+    /**
+     * Solution to part one. All println statements appear under a "PART 1" heading.
+     */
     public void partOne() {
         ArrayList<String> lines = readFile();
         int sum = 0;
@@ -41,6 +50,9 @@ public class Main {
         System.out.println("Sum: " + sum);
     }
 
+    /**
+     * Solution to part one. All println statements appear under a "PART 2" heading.
+     */
     public void partTwo() {
         ArrayList<String> lines = readFile();
         int sum = 0;
@@ -52,6 +64,10 @@ public class Main {
         System.out.println("Sum: " + sum);
     }
 
+    /**
+     * Helper method which populates an array list with the lines from the input file. (PRE-WRITTEN)
+     * @return - ArrayList of lines in file.
+     */
     private ArrayList<String> readFile() {
         ArrayList<String> lines = new ArrayList<String>();
         FileReader fr = null;
